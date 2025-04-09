@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|c:\\users\\aziel\\source\\repos\\weather application v1\\weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|C:\\Users\\aziel\\source\\repos\\Weather Application v1\\weather application v1\\homescreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|C:\\Users\\aziel\\source\\repos\\Weather Application v1\\weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|c:\\users\\aziel\\source\\repos\\weather application v1\\weather application v1\\homescreen.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeScreen.resx",
+              "DocumentMoniker": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.resx",
+              "RelativeDocumentMoniker": "Weather Application v1\\HomeScreen.resx",
+              "ToolTip": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.resx",
+              "RelativeToolTip": "Weather Application v1\\HomeScreen.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-07T04:31:15.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeScreen.cs",
+              "DocumentMoniker": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.cs",
+              "RelativeDocumentMoniker": "Weather Application v1\\HomeScreen.cs",
+              "ToolTip": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.cs",
+              "RelativeToolTip": "Weather Application v1\\HomeScreen.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwEEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:54:31.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeScreen.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.Designer.cs",
+              "RelativeDocumentMoniker": "Weather Application v1\\HomeScreen.Designer.cs",
+              "ToolTip": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.Designer.cs",
+              "RelativeToolTip": "Weather Application v1\\HomeScreen.Designer.cs",
+              "ViewState": "AgIAAPABAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:04:56.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.cs",
+              "RelativeDocumentMoniker": "Weather Application v1\\HomeScreen.cs",
+              "ToolTip": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.cs [Design]",
+              "RelativeToolTip": "Weather Application v1\\HomeScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:23:15.556Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

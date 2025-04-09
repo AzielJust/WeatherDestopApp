@@ -1,0 +1,44 @@
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Weather Application v1.exe.config
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Weather Application v1.exe
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Weather Application v1.pdb
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather Application v1.csproj.AssemblyReference.cache
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather_Application_v1.Properties.Resources.resources
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather Application v1.csproj.GenerateResource.cache
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather Application v1.csproj.CoreCompileInputs.cache
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather Application v1.exe
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather Application v1.pdb
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\QRCoder.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\SiticoneNetFrameworkUI.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Buffers.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Collections.Immutable.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.IO.Pipelines.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Memory.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.ValueTuple.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Buffers.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Collections.Immutable.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.IO.Pipelines.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Memory.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.ValueTuple.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather .B3D26DD1.Up2Date
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather_Application_v1.HomeScreen.resources
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Text.Json.dll
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Text.Json.xml
