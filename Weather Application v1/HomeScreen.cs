@@ -61,12 +61,22 @@ namespace Weather_Application_v1
         {
             using (WebClient wc = new WebClient())
             {
-                string opeenWeatherAPIKey = string.Format("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + openWeatherAPIKey + "&units=metric");
+                string openWeatherURL = string.Format("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + openWeatherAPIKey + "&units=metric");
+                var jsonResult = wc.DownloadString(openWeatherURL);
+                WeatherResponse weatherData = JsonConvert.DeserializeObject<WeatherResponse>(jsonResult);
+                
+                if (weatherData != null && weatherData.Cod == 200)
+                {
+                    Console.WriteLine($"Temperature: {weatherData.Main.Temperature}°C");
+                    Console.WriteLine($"Conditions: {weatherData.Weather[0].Description}");
+                    Console.WriteLine($"Wind Speed: {weatherData.Wind.Speed} m/s");
+                }
             }
         }
         private void HomeScreenSearchButton_Click(object sender, EventArgs e)
         {
             getBeachLocation();
+            getWeatherDetails();
         }
     }
 }
