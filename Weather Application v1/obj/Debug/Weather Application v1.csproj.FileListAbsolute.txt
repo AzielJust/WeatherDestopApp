@@ -42,3 +42,4 @@ C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\De
 C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.Bson.pdb
 C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\Newtonsoft.Json.Bson.xml
 C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\bin\Debug\System.Text.Json.xml
+C:\Users\aziel\source\repos\Weather Application v1\Weather Application v1\obj\Debug\Weather_Application_v1.ForecastPanel.resources

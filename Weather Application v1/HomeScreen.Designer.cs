@@ -37,6 +37,8 @@
             this.ControlPanelHomeButton = new System.Windows.Forms.Button();
             this.ControlPanelBackgroundIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenViewPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ForecastUC = new System.Windows.Forms.FlowLayoutPanel();
             this.HomeScreenOverview = new System.Windows.Forms.Label();
             this.HomeScreenConditionTemp = new System.Windows.Forms.Label();
             this.HomeScreenCurrentTime = new System.Windows.Forms.Label();
@@ -136,6 +138,7 @@
             this.ControlPanelHomeButton.Size = new System.Drawing.Size(44, 42);
             this.ControlPanelHomeButton.TabIndex = 1;
             this.ControlPanelHomeButton.UseVisualStyleBackColor = false;
+            this.ControlPanelHomeButton.Click += new System.EventHandler(this.ControlPanelHomeButton_Click);
             // 
             // ControlPanelBackgroundIMG
             // 
@@ -150,6 +153,8 @@
             // HomeScreenViewPanel
             // 
             this.HomeScreenViewPanel.BackColor = System.Drawing.Color.Transparent;
+            this.HomeScreenViewPanel.Controls.Add(this.label1);
+            this.HomeScreenViewPanel.Controls.Add(this.ForecastUC);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenOverview);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionTemp);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenCurrentTime);
@@ -167,6 +172,26 @@
             this.HomeScreenViewPanel.Name = "HomeScreenViewPanel";
             this.HomeScreenViewPanel.Size = new System.Drawing.Size(1035, 635);
             this.HomeScreenViewPanel.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.label1.Font = new System.Drawing.Font("Roboto Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(809, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 39);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Forecast";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ForecastUC
+            // 
+            this.ForecastUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.ForecastUC.Location = new System.Drawing.Point(757, 81);
+            this.ForecastUC.Name = "ForecastUC";
+            this.ForecastUC.Size = new System.Drawing.Size(262, 470);
+            this.ForecastUC.TabIndex = 14;
             // 
             // HomeScreenOverview
             // 
@@ -329,6 +354,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.FlowLayoutPanel ForecastUC;
 
         private System.Windows.Forms.Label HomeScreenOverview;
 

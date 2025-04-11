@@ -49,7 +49,7 @@ namespace Weather_Application_v1
         
                 var jsonResult = wc.DownloadString(geoapifyURL);
                 GeoapifyResponse response = JsonConvert.DeserializeObject<GeoapifyResponse>(jsonResult);
-
+                
                 if (response?.Features?.Count > 0)
                 {
                     // Access the first result
@@ -102,12 +102,78 @@ namespace Weather_Application_v1
                 HomeScreenConditionSwellSize.Text = (marineData.current.swell_wave_height);
             }
         }
+        
+        private void DisplayFiveDayForecast(List<DailyForecast> forecasts)
+        {
+            // Clear existing forecasts
+            ForecastUC.Controls.Clear();
+
+            foreach (var forecast in forecasts)
+            {
+                // Create new instance of your user control
+                var forecastControl = new ForecastPanel();
+        
+                // Set the control properties
+                forecastControl.ForecastDate.Text = forecast.Date;
+                forecastControl.ForecastTemp.Text = $"{forecast.MinTemp}°C / {forecast.MaxTemp}°C";
+        
+                // Load weather icon (example using OpenWeatherMap icons)
+                string iconUrl = $"http://openweathermap.org/img/wn/{forecast.Icon}@2x.png";
+                forecastControl.ForecastIcon.LoadAsync(iconUrl);
+        
+                // Add to flow panel
+                ForecastUC.Controls.Add(forecastControl);
+            }
+        }
+        
+        void GetFiveDayForecast()
+        {
+            try
+            {
+                using (WebClient wc = new WebClient())
+                {
+                    string marineAPIURL = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={openWeatherAPIKey}&units=metric";
+                    var json = wc.DownloadString(marineAPIURL);
+                    var forecastData = JsonConvert.DeserializeObject<five_day_forecast_model.root>(json);
+    
+                    var dailyForecasts = forecastData.list
+                        .GroupBy(item => DateTime.Parse(item.dt_txt).Date)
+                        .Select(group => group
+                            .OrderBy(item => Math.Abs(DateTime.Parse(item.dt_txt).Hour - 12))
+                            .First())
+                        .Take(5)
+                        .Select(item => new DailyForecast 
+                        {
+                            Date = DateTime.Parse(item.dt_txt).ToString("ddd, MMM dd"), // More readable format
+                            Icon = item.weather.First().icon,
+                            MinTemp = Math.Round(item.main.temp_min),
+                            MaxTemp = Math.Round(item.main.temp_max)
+                        })
+                        .ToList();
+            
+                    // Display in UI
+                    DisplayFiveDayForecast(dailyForecasts);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load forecast: {ex.Message}");
+            }
+        }
+        
         private void HomeScreenSearchButton_Click(object sender, EventArgs e)
         {
             formatLocation();
             getBeachLocation();
             getWeatherDetails();
             GetWaveDetails();
+            GetFiveDayForecast();
+        }
+
+        private void ControlPanelHomeButton_Click(object sender, EventArgs e)
+        {
+            HomeScreenViewPanel.Visible = false;
+            HomeScreenViewPanel.Enabled = false;
         }
     }
 }
