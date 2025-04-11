@@ -33,6 +33,7 @@ namespace Weather_Application_v1
         public HomeScreen()
         {
             InitializeComponent();
+            
         }
         
 
@@ -192,11 +193,7 @@ namespace Weather_Application_v1
             pullDisplay();
         }
 
-        private void ControlPanelHomeButton_Click(object sender, EventArgs e)
-        {
-            HomeScreenViewPanel.Visible = false;
-            HomeScreenViewPanel.Enabled = false;
-        }
+        
         
 
         private void SettingsPanelMetricButton_Click(object sender, EventArgs e)
@@ -219,7 +216,48 @@ namespace Weather_Application_v1
             
             SettingsPannelImperialButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#0066cc");
             SettingsPanelMetricButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#202b3b");
+        }
+
+        private void HelpScreenGetHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("www.sites.google.com/stu.usc.edu.tt/flowforecast/home?read_current=1");
+        }
+
+        private void ControlPanelHelpButton_Click(object sender, EventArgs e)
+        {
+            HelpScreen.Visible = true;
+            HelpScreen.Enabled = true;
             
+            HomeScreenViewPanel.Visible = false;
+            HomeScreenViewPanel.Enabled = false;
+
+            SettingsScreenPanel.Visible = false;
+            SettingsScreenPanel.Enabled = false;
+        }
+
+
+        private void ControlPanelSettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsScreenPanel.Visible = true;
+            SettingsScreenPanel.Enabled = true;
+            
+            HomeScreenViewPanel.Visible = false;
+            HomeScreenViewPanel.Enabled = false;
+
+            HelpScreen.Visible = false;
+            HelpScreen.Enabled = false;
+        }
+        
+        private void ControlPanelHomeButton_Click(object sender, EventArgs e)
+        {
+            HomeScreenViewPanel.Visible = true;
+            HomeScreenViewPanel.Enabled = true;
+            
+            SettingsScreenPanel.Visible = false;
+            HomeScreenViewPanel.Enabled = false;
+
+            HelpScreen.Visible = false;
+            HelpScreen.Enabled = false;
         }
     }
 }

@@ -33,7 +33,6 @@
             this.ControlPanelLeaveButton = new System.Windows.Forms.Button();
             this.ControlPanelHelpButton = new System.Windows.Forms.Button();
             this.ControlPanelSettingsButton = new System.Windows.Forms.Button();
-            this.ControlPanelOverviewButton = new System.Windows.Forms.Button();
             this.ControlPanelHomeButton = new System.Windows.Forms.Button();
             this.ControlPanelBackgroundIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenViewPanel = new System.Windows.Forms.Panel();
@@ -58,6 +57,11 @@
             this.SettingsPanelDescription = new System.Windows.Forms.Label();
             this.SettingsPanelUnitsOfMeasurment = new System.Windows.Forms.Label();
             this.SettingsScreenSettings = new System.Windows.Forms.Label();
+            this.HelpScreen = new System.Windows.Forms.Panel();
+            this.HelpScreenGetHelp = new System.Windows.Forms.Button();
+            this.HelpScreenDescription = new System.Windows.Forms.Label();
+            this.HelpScreenTitle = new System.Windows.Forms.Label();
+            this.HelpScreenHelp = new System.Windows.Forms.Label();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControlPanelBackgroundIMG)).BeginInit();
             this.HomeScreenViewPanel.SuspendLayout();
@@ -66,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenSearchBarBackgroundIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).BeginInit();
             this.SettingsScreenPanel.SuspendLayout();
+            this.HelpScreen.SuspendLayout();
             this.SuspendLayout();
             // 
             // ControlPanel
@@ -73,7 +78,6 @@
             this.ControlPanel.Controls.Add(this.ControlPanelLeaveButton);
             this.ControlPanel.Controls.Add(this.ControlPanelHelpButton);
             this.ControlPanel.Controls.Add(this.ControlPanelSettingsButton);
-            this.ControlPanel.Controls.Add(this.ControlPanelOverviewButton);
             this.ControlPanel.Controls.Add(this.ControlPanelHomeButton);
             this.ControlPanel.Controls.Add(this.ControlPanelBackgroundIMG);
             this.ControlPanel.Location = new System.Drawing.Point(12, 12);
@@ -101,11 +105,12 @@
             this.ControlPanelHelpButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ControlPanelHelpButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelHelpButton.Image")));
-            this.ControlPanelHelpButton.Location = new System.Drawing.Point(13, 340);
+            this.ControlPanelHelpButton.Location = new System.Drawing.Point(13, 234);
             this.ControlPanelHelpButton.Name = "ControlPanelHelpButton";
             this.ControlPanelHelpButton.Size = new System.Drawing.Size(44, 42);
             this.ControlPanelHelpButton.TabIndex = 4;
             this.ControlPanelHelpButton.UseVisualStyleBackColor = false;
+            this.ControlPanelHelpButton.Click += new System.EventHandler(this.ControlPanelHelpButton_Click);
             // 
             // ControlPanelSettingsButton
             // 
@@ -114,24 +119,12 @@
             this.ControlPanelSettingsButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ControlPanelSettingsButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelSettingsButton.Image")));
-            this.ControlPanelSettingsButton.Location = new System.Drawing.Point(13, 259);
+            this.ControlPanelSettingsButton.Location = new System.Drawing.Point(13, 164);
             this.ControlPanelSettingsButton.Name = "ControlPanelSettingsButton";
             this.ControlPanelSettingsButton.Size = new System.Drawing.Size(44, 42);
             this.ControlPanelSettingsButton.TabIndex = 3;
             this.ControlPanelSettingsButton.UseVisualStyleBackColor = false;
-            // 
-            // ControlPanelOverviewButton
-            // 
-            this.ControlPanelOverviewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.ControlPanelOverviewButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.ControlPanelOverviewButton.FlatAppearance.BorderSize = 0;
-            this.ControlPanelOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ControlPanelOverviewButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelOverviewButton.Image")));
-            this.ControlPanelOverviewButton.Location = new System.Drawing.Point(13, 178);
-            this.ControlPanelOverviewButton.Name = "ControlPanelOverviewButton";
-            this.ControlPanelOverviewButton.Size = new System.Drawing.Size(44, 42);
-            this.ControlPanelOverviewButton.TabIndex = 2;
-            this.ControlPanelOverviewButton.UseVisualStyleBackColor = false;
+            this.ControlPanelSettingsButton.Click += new System.EventHandler(this.ControlPanelSettingsButton_Click);
             // 
             // ControlPanelHomeButton
             // 
@@ -175,7 +168,7 @@
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchBarBackgroundIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastImage);
-            this.HomeScreenViewPanel.Location = new System.Drawing.Point(105, 649);
+            this.HomeScreenViewPanel.Location = new System.Drawing.Point(262, 458);
             this.HomeScreenViewPanel.Name = "HomeScreenViewPanel";
             this.HomeScreenViewPanel.Size = new System.Drawing.Size(1035, 635);
             this.HomeScreenViewPanel.TabIndex = 7;
@@ -338,7 +331,7 @@
             this.SettingsScreenPanel.Controls.Add(this.SettingsPanelDescription);
             this.SettingsScreenPanel.Controls.Add(this.SettingsPanelUnitsOfMeasurment);
             this.SettingsScreenPanel.Controls.Add(this.SettingsScreenSettings);
-            this.SettingsScreenPanel.Location = new System.Drawing.Point(105, 16);
+            this.SettingsScreenPanel.Location = new System.Drawing.Point(24, 556);
             this.SettingsScreenPanel.Name = "SettingsScreenPanel";
             this.SettingsScreenPanel.Size = new System.Drawing.Size(1035, 631);
             this.SettingsScreenPanel.TabIndex = 8;
@@ -404,14 +397,74 @@
             this.SettingsScreenSettings.TabIndex = 0;
             this.SettingsScreenSettings.Text = "Settings";
             // 
+            // HelpScreen
+            // 
+            this.HelpScreen.Controls.Add(this.HelpScreenGetHelp);
+            this.HelpScreen.Controls.Add(this.SettingsScreenPanel);
+            this.HelpScreen.Controls.Add(this.HomeScreenViewPanel);
+            this.HelpScreen.Controls.Add(this.HelpScreenDescription);
+            this.HelpScreen.Controls.Add(this.HelpScreenTitle);
+            this.HelpScreen.Controls.Add(this.HelpScreenHelp);
+            this.HelpScreen.Location = new System.Drawing.Point(105, 12);
+            this.HelpScreen.Name = "HelpScreen";
+            this.HelpScreen.Size = new System.Drawing.Size(1035, 631);
+            this.HelpScreen.TabIndex = 9;
+            // 
+            // HelpScreenGetHelp
+            // 
+            this.HelpScreenGetHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.HelpScreenGetHelp.FlatAppearance.BorderColor = System.Drawing.SystemColors.InactiveBorder;
+            this.HelpScreenGetHelp.FlatAppearance.BorderSize = 0;
+            this.HelpScreenGetHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HelpScreenGetHelp.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpScreenGetHelp.ForeColor = System.Drawing.Color.White;
+            this.HelpScreenGetHelp.Location = new System.Drawing.Point(379, 328);
+            this.HelpScreenGetHelp.Name = "HelpScreenGetHelp";
+            this.HelpScreenGetHelp.Size = new System.Drawing.Size(225, 29);
+            this.HelpScreenGetHelp.TabIndex = 5;
+            this.HelpScreenGetHelp.Text = "FlowForecast Help Page";
+            this.HelpScreenGetHelp.UseVisualStyleBackColor = false;
+            this.HelpScreenGetHelp.Click += new System.EventHandler(this.HelpScreenGetHelp_Click);
+            // 
+            // HelpScreenDescription
+            // 
+            this.HelpScreenDescription.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpScreenDescription.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.HelpScreenDescription.Location = new System.Drawing.Point(213, 259);
+            this.HelpScreenDescription.Name = "HelpScreenDescription";
+            this.HelpScreenDescription.Size = new System.Drawing.Size(556, 61);
+            this.HelpScreenDescription.TabIndex = 2;
+            this.HelpScreenDescription.Text = "If you need any help or assistance, visit our website for a wealth of resources t" + "o support you.";
+            this.HelpScreenDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HelpScreenTitle
+            // 
+            this.HelpScreenTitle.Font = new System.Drawing.Font("Roboto", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpScreenTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.HelpScreenTitle.Location = new System.Drawing.Point(307, 227);
+            this.HelpScreenTitle.Name = "HelpScreenTitle";
+            this.HelpScreenTitle.Size = new System.Drawing.Size(360, 32);
+            this.HelpScreenTitle.TabIndex = 1;
+            this.HelpScreenTitle.Text = "Get Help";
+            this.HelpScreenTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HelpScreenHelp
+            // 
+            this.HelpScreenHelp.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpScreenHelp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.HelpScreenHelp.Location = new System.Drawing.Point(24, 21);
+            this.HelpScreenHelp.Name = "HelpScreenHelp";
+            this.HelpScreenHelp.Size = new System.Drawing.Size(288, 44);
+            this.HelpScreenHelp.TabIndex = 0;
+            this.HelpScreenHelp.Text = "Help";
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1149, 660);
-            this.Controls.Add(this.HomeScreenViewPanel);
-            this.Controls.Add(this.SettingsScreenPanel);
+            this.Controls.Add(this.HelpScreen);
             this.Controls.Add(this.ControlPanel);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "HomeScreen";
@@ -425,8 +478,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenSearchBarBackgroundIMG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).EndInit();
             this.SettingsScreenPanel.ResumeLayout(false);
+            this.HelpScreen.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Panel HelpScreen;
+        private System.Windows.Forms.Button HelpScreenGetHelp;
+        private System.Windows.Forms.Label HelpScreenDescription;
+        private System.Windows.Forms.Label HelpScreenTitle;
+        private System.Windows.Forms.Label HelpScreenHelp;
 
         private System.Windows.Forms.Label SettingsPanelUnitsOfMeasurment;
 
@@ -479,7 +539,6 @@
         private System.Windows.Forms.Button ControlPanelHomeButton;
         private System.Windows.Forms.Button ControlPanelHelpButton;
         private System.Windows.Forms.Button ControlPanelSettingsButton;
-        private System.Windows.Forms.Button ControlPanelOverviewButton;
         private System.Windows.Forms.Button ControlPanelLeaveButton;
         
     }
