@@ -102,12 +102,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ForcastOverview.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ForcastOverview.Designer.cs">
-      <DependentUpon>ForcastOverview.cs</DependentUpon>
-    </Compile>
     <Compile Include="ForecastPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,9 +120,6 @@
     <Compile Include="Models\weatherforcast.model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ForcastOverview.resx">
-      <DependentUpon>ForcastOverview.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ForecastPanel.resx">
       <DependentUpon>ForecastPanel.cs</DependentUpon>
     </EmbeddedResource>

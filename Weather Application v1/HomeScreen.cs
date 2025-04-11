@@ -24,6 +24,12 @@ namespace Weather_Application_v1
         double longitude;
         double latitude;
         string formatedLocation;
+
+        private string unitsOfMeasurement = "metric";
+        private string unitsOfMeasurmentWindSymbol = " kph";
+        private string unitsOfMeasurmentSymbol = " m";
+        private string unitsOfMeasurmentTempSymbol = " °c";
+        
         public HomeScreen()
         {
             InitializeComponent();
@@ -71,22 +77,16 @@ namespace Weather_Application_v1
         {
             using (WebClient wc = new WebClient())
             {
-                string openWeatherURL = string.Format("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + openWeatherAPIKey + "&units=metric");
+                string openWeatherURL = $"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={openWeatherAPIKey}&units={unitsOfMeasurement}";
                 var json = wc.DownloadString(openWeatherURL);
                 weatherdetails_model.root weatherData = JsonConvert.DeserializeObject<weatherdetails_model.root>(json);
                 
                 if (weatherData != null)
                 {
-                    Console.WriteLine($"Temperature: {weatherData.main.temp}°C");
-                    Console.WriteLine($"Conditions: {weatherData.weather[0].description}");
-                    Console.WriteLine($"Icon: {weatherData.weather[0].icon}");
-                    Console.WriteLine($"Wind Speed: {weatherData.wind.speed} m/s");
-                    Console.WriteLine(openWeatherURL);
-                    
                     HomeScreenForcastImage.Load(string.Format("https://openweathermap.org/img/wn/" + weatherData.weather[0].icon + "@4x.png"));
-                    HomeScreenBeachTemp.Text = weatherData.main.temp + " °C";
-                    HomeScreenConditionWindSpeed.Text = weatherData.wind.speed + " m/s";
-                    HomeScreenConditionTemp.Text = weatherData.main.temp + " °C";
+                    HomeScreenBeachTemp.Text = weatherData.main.temp + unitsOfMeasurmentTempSymbol;
+                    HomeScreenConditionWindSpeed.Text = weatherData.wind.speed + unitsOfMeasurmentWindSymbol;
+                    HomeScreenConditionTemp.Text = weatherData.main.temp + unitsOfMeasurmentTempSymbol;
                     HomeScreenOverview.Text = weatherData.weather[0].description;
                 }
             }
@@ -95,12 +95,12 @@ namespace Weather_Application_v1
         {
             using (WebClient wc = new WebClient())
             {
-                string marineAPIURL = $"https://marine-api.open-meteo.com/v1/marine?latitude={latitude}&longitude={longitude}&current=swell_wave_height,wave_height";
+                string marineAPIURL = $"https://marine-api.open-meteo.com/v1/marine?latitude={latitude}&longitude={longitude}&current=swell_wave_height,wave_height&length_unit={unitsOfMeasurement}";
                 var json = wc.DownloadString(marineAPIURL);
                 marinedata_model.root marineData = JsonConvert.DeserializeObject<marinedata_model.root>(json);
 
-                Console.WriteLine("Swell Size: " + marineData.current.swell_wave_height);
-                HomeScreenConditionSwellSize.Text = (marineData.current.swell_wave_height);
+                Console.WriteLine("Swell Size: " + marineData.current.swell_wave_height + unitsOfMeasurmentSymbol);
+                HomeScreenConditionSwellSize.Text = (marineData.current.swell_wave_height + unitsOfMeasurmentSymbol);
             }
         }
         
@@ -116,7 +116,7 @@ namespace Weather_Application_v1
         
                 // Set the control properties
                 forecastControl.ForecastDate.Text = forecast.Date;
-                forecastControl.ForecastTemp.Text = $"{forecast.MinTemp}°C / {forecast.MaxTemp}°C";
+                forecastControl.ForecastTemp.Text = $"{forecast.MinTemp}{unitsOfMeasurmentTempSymbol} / {forecast.MaxTemp}{unitsOfMeasurmentTempSymbol}";
         
                 // Load weather icon (example using OpenWeatherMap icons)
                 string iconUrl = $"http://openweathermap.org/img/wn/{forecast.Icon}@2x.png";
@@ -126,14 +126,26 @@ namespace Weather_Application_v1
                 ForecastUC.Controls.Add(forecastControl);
             }
         }
-        
+        private double ConvertWindSpeed(double speedInMetersPerSecond)
+        {
+            if (unitsOfMeasurement == "imperial")
+            {
+                // Convert m/s to mph (1 m/s = 2.23694 mph)
+                return Math.Round(speedInMetersPerSecond * 2.23694, 1);
+            }
+            else // metric
+            {
+                // Convert m/s to km/h (1 m/s = 3.6 km/h)
+                return Math.Round(speedInMetersPerSecond * 3.6, 1);
+            }
+        }
         void GetFiveDayForecast()
         {
            
             using (WebClient wc = new WebClient())
             {
                 // Added 'lang=en' parameter to get English descriptions
-                string marineAPIURL = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={openWeatherAPIKey}&units=metric&lang=en";
+                string marineAPIURL = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={openWeatherAPIKey}&units={unitsOfMeasurement}&lang=en";
                 var json = wc.DownloadString(marineAPIURL);
                 var forecastData = JsonConvert.DeserializeObject<five_day_forecast_model.root>(json);
 
@@ -148,7 +160,7 @@ namespace Weather_Application_v1
                         Date = DateTime.Parse(item.dt_txt).ToString("ddd, MMM dd"),
                         Icon = item.weather.First().icon,
                         Description = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(item.weather.First().description), // Capitalized description
-                        WindSpeed = Math.Round(item.wind.speed * 3.6, 1), // Convert m/s to km/h and round
+                        WindSpeed = ConvertWindSpeed(item.wind.speed), // Convert m/s to km/h and round
                         MinTemp = Math.Round(item.main.temp_min),
                         MaxTemp = Math.Round(item.main.temp_max)
                     })
@@ -165,8 +177,8 @@ namespace Weather_Application_v1
                 }
             }
         }
-        
-        private void HomeScreenSearchButton_Click(object sender, EventArgs e)
+
+        void pullDisplay()
         {
             formatLocation();
             getBeachLocation();
@@ -174,11 +186,40 @@ namespace Weather_Application_v1
             GetWaveDetails();
             GetFiveDayForecast();
         }
+        
+        private void HomeScreenSearchButton_Click(object sender, EventArgs e)
+        {
+            pullDisplay();
+        }
 
         private void ControlPanelHomeButton_Click(object sender, EventArgs e)
         {
             HomeScreenViewPanel.Visible = false;
             HomeScreenViewPanel.Enabled = false;
+        }
+        
+
+        private void SettingsPanelMetricButton_Click(object sender, EventArgs e)
+        {
+            unitsOfMeasurement = "metric";
+            unitsOfMeasurmentWindSymbol = " kph";
+            unitsOfMeasurmentSymbol = " m";
+            unitsOfMeasurmentTempSymbol = " °c";
+            
+            SettingsPanelMetricButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#0066cc");
+            SettingsPannelImperialButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#202b3b");
+        }
+
+        private void SettingPannelImperialButton_Click(object sender, EventArgs e)
+        {
+            unitsOfMeasurement = "imperial";
+            unitsOfMeasurmentWindSymbol = " mph";
+            unitsOfMeasurmentSymbol = " ft";
+            unitsOfMeasurmentTempSymbol = "°c";
+            
+            SettingsPannelImperialButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#0066cc");
+            SettingsPanelMetricButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#202b3b");
+            
         }
     }
 }

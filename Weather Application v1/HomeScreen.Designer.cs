@@ -52,6 +52,12 @@
             this.HomeScreenForcastIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenSearchBarBackgroundIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenForcastImage = new System.Windows.Forms.PictureBox();
+            this.SettingsScreenPanel = new System.Windows.Forms.Panel();
+            this.SettingsPannelImperialButton = new System.Windows.Forms.Button();
+            this.SettingsPanelMetricButton = new System.Windows.Forms.Button();
+            this.SettingsPanelDescription = new System.Windows.Forms.Label();
+            this.SettingsPanelUnitsOfMeasurment = new System.Windows.Forms.Label();
+            this.SettingsScreenSettings = new System.Windows.Forms.Label();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControlPanelBackgroundIMG)).BeginInit();
             this.HomeScreenViewPanel.SuspendLayout();
@@ -59,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenSearchBarBackgroundIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).BeginInit();
+            this.SettingsScreenPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ControlPanel
@@ -168,7 +175,7 @@
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchBarBackgroundIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastImage);
-            this.HomeScreenViewPanel.Location = new System.Drawing.Point(102, 12);
+            this.HomeScreenViewPanel.Location = new System.Drawing.Point(105, 649);
             this.HomeScreenViewPanel.Name = "HomeScreenViewPanel";
             this.HomeScreenViewPanel.Size = new System.Drawing.Size(1035, 635);
             this.HomeScreenViewPanel.TabIndex = 7;
@@ -182,7 +189,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 39);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Forecast";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ForecastUC
@@ -201,7 +207,6 @@
             this.HomeScreenOverview.Name = "HomeScreenOverview";
             this.HomeScreenOverview.Size = new System.Drawing.Size(338, 84);
             this.HomeScreenOverview.TabIndex = 13;
-            this.HomeScreenOverview.Text = "[Weather Overview]";
             // 
             // HomeScreenConditionTemp
             // 
@@ -212,7 +217,6 @@
             this.HomeScreenConditionTemp.Name = "HomeScreenConditionTemp";
             this.HomeScreenConditionTemp.Size = new System.Drawing.Size(141, 31);
             this.HomeScreenConditionTemp.TabIndex = 11;
-            this.HomeScreenConditionTemp.Text = "[Temp]";
             // 
             // HomeScreenCurrentTime
             // 
@@ -223,7 +227,6 @@
             this.HomeScreenCurrentTime.Name = "HomeScreenCurrentTime";
             this.HomeScreenCurrentTime.Size = new System.Drawing.Size(141, 31);
             this.HomeScreenCurrentTime.TabIndex = 10;
-            this.HomeScreenCurrentTime.Text = "[Time]";
             // 
             // HomeScreenConditionWindSpeed
             // 
@@ -234,7 +237,6 @@
             this.HomeScreenConditionWindSpeed.Name = "HomeScreenConditionWindSpeed";
             this.HomeScreenConditionWindSpeed.Size = new System.Drawing.Size(141, 31);
             this.HomeScreenConditionWindSpeed.TabIndex = 9;
-            this.HomeScreenConditionWindSpeed.Text = "[Wind spd]";
             // 
             // HomeScreenConditionSwellSize
             // 
@@ -245,7 +247,6 @@
             this.HomeScreenConditionSwellSize.Name = "HomeScreenConditionSwellSize";
             this.HomeScreenConditionSwellSize.Size = new System.Drawing.Size(156, 31);
             this.HomeScreenConditionSwellSize.TabIndex = 8;
-            this.HomeScreenConditionSwellSize.Text = "[Swell Size]";
             // 
             // HomeScreenBeachTemp
             // 
@@ -255,7 +256,6 @@
             this.HomeScreenBeachTemp.Name = "HomeScreenBeachTemp";
             this.HomeScreenBeachTemp.Size = new System.Drawing.Size(301, 84);
             this.HomeScreenBeachTemp.TabIndex = 7;
-            this.HomeScreenBeachTemp.Text = "[Temp]";
             // 
             // HomeScreenBeachName
             // 
@@ -265,7 +265,6 @@
             this.HomeScreenBeachName.Name = "HomeScreenBeachName";
             this.HomeScreenBeachName.Size = new System.Drawing.Size(485, 82);
             this.HomeScreenBeachName.TabIndex = 6;
-            this.HomeScreenBeachName.Text = "[Beach Name]";
             // 
             // HomeScreenSearchButton
             // 
@@ -292,7 +291,6 @@
             this.HomeScreenSearchBar.Name = "HomeScreenSearchBar";
             this.HomeScreenSearchBar.Size = new System.Drawing.Size(539, 28);
             this.HomeScreenSearchBar.TabIndex = 4;
-            this.HomeScreenSearchBar.Text = "[Search]";
             // 
             // HomeScreenConditionsIMG
             // 
@@ -333,6 +331,79 @@
             this.HomeScreenForcastImage.TabIndex = 12;
             this.HomeScreenForcastImage.TabStop = false;
             // 
+            // SettingsScreenPanel
+            // 
+            this.SettingsScreenPanel.Controls.Add(this.SettingsPannelImperialButton);
+            this.SettingsScreenPanel.Controls.Add(this.SettingsPanelMetricButton);
+            this.SettingsScreenPanel.Controls.Add(this.SettingsPanelDescription);
+            this.SettingsScreenPanel.Controls.Add(this.SettingsPanelUnitsOfMeasurment);
+            this.SettingsScreenPanel.Controls.Add(this.SettingsScreenSettings);
+            this.SettingsScreenPanel.Location = new System.Drawing.Point(105, 16);
+            this.SettingsScreenPanel.Name = "SettingsScreenPanel";
+            this.SettingsScreenPanel.Size = new System.Drawing.Size(1035, 631);
+            this.SettingsScreenPanel.TabIndex = 8;
+            // 
+            // SettingsPannelImperialButton
+            // 
+            this.SettingsPannelImperialButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.SettingsPannelImperialButton.FlatAppearance.BorderSize = 0;
+            this.SettingsPannelImperialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsPannelImperialButton.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsPannelImperialButton.ForeColor = System.Drawing.Color.White;
+            this.SettingsPannelImperialButton.Location = new System.Drawing.Point(223, 161);
+            this.SettingsPannelImperialButton.Name = "SettingsPannelImperialButton";
+            this.SettingsPannelImperialButton.Size = new System.Drawing.Size(112, 29);
+            this.SettingsPannelImperialButton.TabIndex = 6;
+            this.SettingsPannelImperialButton.Text = "Imperial";
+            this.SettingsPannelImperialButton.UseVisualStyleBackColor = false;
+            this.SettingsPannelImperialButton.Click += new System.EventHandler(this.SettingPannelImperialButton_Click);
+            // 
+            // SettingsPanelMetricButton
+            // 
+            this.SettingsPanelMetricButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.SettingsPanelMetricButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.InactiveBorder;
+            this.SettingsPanelMetricButton.FlatAppearance.BorderSize = 0;
+            this.SettingsPanelMetricButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsPanelMetricButton.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsPanelMetricButton.ForeColor = System.Drawing.Color.White;
+            this.SettingsPanelMetricButton.Location = new System.Drawing.Point(39, 161);
+            this.SettingsPanelMetricButton.Name = "SettingsPanelMetricButton";
+            this.SettingsPanelMetricButton.Size = new System.Drawing.Size(112, 29);
+            this.SettingsPanelMetricButton.TabIndex = 5;
+            this.SettingsPanelMetricButton.Text = "Metric";
+            this.SettingsPanelMetricButton.UseVisualStyleBackColor = false;
+            this.SettingsPanelMetricButton.Click += new System.EventHandler(this.SettingsPanelMetricButton_Click);
+            // 
+            // SettingsPanelDescription
+            // 
+            this.SettingsPanelDescription.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsPanelDescription.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SettingsPanelDescription.Location = new System.Drawing.Point(32, 129);
+            this.SettingsPanelDescription.Name = "SettingsPanelDescription";
+            this.SettingsPanelDescription.Size = new System.Drawing.Size(559, 32);
+            this.SettingsPanelDescription.TabIndex = 2;
+            this.SettingsPanelDescription.Text = "User prefered units of measurement";
+            // 
+            // SettingsPanelUnitsOfMeasurment
+            // 
+            this.SettingsPanelUnitsOfMeasurment.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsPanelUnitsOfMeasurment.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SettingsPanelUnitsOfMeasurment.Location = new System.Drawing.Point(32, 97);
+            this.SettingsPanelUnitsOfMeasurment.Name = "SettingsPanelUnitsOfMeasurment";
+            this.SettingsPanelUnitsOfMeasurment.Size = new System.Drawing.Size(360, 32);
+            this.SettingsPanelUnitsOfMeasurment.TabIndex = 1;
+            this.SettingsPanelUnitsOfMeasurment.Text = "Units Of Measurement";
+            // 
+            // SettingsScreenSettings
+            // 
+            this.SettingsScreenSettings.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsScreenSettings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SettingsScreenSettings.Location = new System.Drawing.Point(24, 21);
+            this.SettingsScreenSettings.Name = "SettingsScreenSettings";
+            this.SettingsScreenSettings.Size = new System.Drawing.Size(288, 44);
+            this.SettingsScreenSettings.TabIndex = 0;
+            this.SettingsScreenSettings.Text = "Settings";
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +411,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1149, 660);
             this.Controls.Add(this.HomeScreenViewPanel);
+            this.Controls.Add(this.SettingsScreenPanel);
             this.Controls.Add(this.ControlPanel);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "HomeScreen";
@@ -352,8 +424,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastIMG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenSearchBarBackgroundIMG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).EndInit();
+            this.SettingsScreenPanel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label SettingsPanelUnitsOfMeasurment;
+
+        private System.Windows.Forms.Label SettingsPanelDescription;
+
+        private System.Windows.Forms.Panel SettingsScreenPanel;
+
+        private System.Windows.Forms.Button SettingsPannelImperialButton;
+        private System.Windows.Forms.Button SettingPannelMetricButton;
+        private System.Windows.Forms.Label SettingsScreenDescription;
+        private System.Windows.Forms.Label SettingsScreenTitle;
+        private System.Windows.Forms.Label SettingsScreenSettings;
+
+        private System.Windows.Forms.Button SettingsPanelMetricButton;
+        
 
         private System.Windows.Forms.Label label1;
 
@@ -393,6 +481,7 @@
         private System.Windows.Forms.Button ControlPanelSettingsButton;
         private System.Windows.Forms.Button ControlPanelOverviewButton;
         private System.Windows.Forms.Button ControlPanelLeaveButton;
+        
     }
 }
 
