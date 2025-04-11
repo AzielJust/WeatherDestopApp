@@ -259,5 +259,10 @@ namespace Weather_Application_v1
             HelpScreen.Visible = false;
             HelpScreen.Enabled = false;
         }
+
+        private void ControlPanelLeaveButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

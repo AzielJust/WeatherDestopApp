@@ -88,6 +88,8 @@
             // ControlPanelLeaveButton
             // 
             this.ControlPanelLeaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.ControlPanelLeaveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelLeaveButton.BackgroundImage")));
+            this.ControlPanelLeaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ControlPanelLeaveButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelLeaveButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelLeaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -96,10 +98,13 @@
             this.ControlPanelLeaveButton.Size = new System.Drawing.Size(44, 42);
             this.ControlPanelLeaveButton.TabIndex = 5;
             this.ControlPanelLeaveButton.UseVisualStyleBackColor = false;
+            this.ControlPanelLeaveButton.Click += new System.EventHandler(this.ControlPanelLeaveButton_Click);
             // 
             // ControlPanelHelpButton
             // 
             this.ControlPanelHelpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.ControlPanelHelpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelHelpButton.BackgroundImage")));
+            this.ControlPanelHelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ControlPanelHelpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelHelpButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -113,6 +118,8 @@
             // ControlPanelSettingsButton
             // 
             this.ControlPanelSettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.ControlPanelSettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelSettingsButton.BackgroundImage")));
+            this.ControlPanelSettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ControlPanelSettingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelSettingsButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -126,6 +133,8 @@
             // ControlPanelHomeButton
             // 
             this.ControlPanelHomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.ControlPanelHomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelHomeButton.BackgroundImage")));
+            this.ControlPanelHomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ControlPanelHomeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelHomeButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -164,7 +173,7 @@
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchBarBackgroundIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastImage);
-            this.HomeScreenViewPanel.Location = new System.Drawing.Point(115, 649);
+            this.HomeScreenViewPanel.Location = new System.Drawing.Point(103, 12);
             this.HomeScreenViewPanel.Name = "HomeScreenViewPanel";
             this.HomeScreenViewPanel.Size = new System.Drawing.Size(1035, 635);
             this.HomeScreenViewPanel.TabIndex = 7;
@@ -177,7 +186,6 @@
             this.HomeScreenBeachName.Name = "HomeScreenBeachName";
             this.HomeScreenBeachName.Size = new System.Drawing.Size(485, 82);
             this.HomeScreenBeachName.TabIndex = 6;
-            this.HomeScreenBeachName.Text = "[Beach Name]";
             // 
             // label1
             // 
@@ -207,7 +215,6 @@
             this.HomeScreenOverview.Name = "HomeScreenOverview";
             this.HomeScreenOverview.Size = new System.Drawing.Size(338, 84);
             this.HomeScreenOverview.TabIndex = 13;
-            this.HomeScreenOverview.Text = "[Overview]";
             // 
             // HomeScreenConditionTemp
             // 
@@ -257,7 +264,6 @@
             this.HomeScreenBeachTemp.Name = "HomeScreenBeachTemp";
             this.HomeScreenBeachTemp.Size = new System.Drawing.Size(301, 84);
             this.HomeScreenBeachTemp.TabIndex = 7;
-            this.HomeScreenBeachTemp.Text = "[Temp]";
             // 
             // HomeScreenSearchButton
             // 
@@ -288,6 +294,8 @@
             // 
             // HomeScreenConditionsIMG
             // 
+            this.HomeScreenConditionsIMG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeScreenConditionsIMG.BackgroundImage")));
+            this.HomeScreenConditionsIMG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeScreenConditionsIMG.Location = new System.Drawing.Point(16, 393);
             this.HomeScreenConditionsIMG.Name = "HomeScreenConditionsIMG";
             this.HomeScreenConditionsIMG.Size = new System.Drawing.Size(690, 233);
@@ -309,6 +317,7 @@
             // HomeScreenSearchBarBackgroundIMG
             // 
             this.HomeScreenSearchBarBackgroundIMG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeScreenSearchBarBackgroundIMG.BackgroundImage")));
+            this.HomeScreenSearchBarBackgroundIMG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeScreenSearchBarBackgroundIMG.Location = new System.Drawing.Point(12, 17);
             this.HomeScreenSearchBarBackgroundIMG.Name = "HomeScreenSearchBarBackgroundIMG";
             this.HomeScreenSearchBarBackgroundIMG.Size = new System.Drawing.Size(631, 56);
@@ -462,13 +471,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1146, 664);
             this.Controls.Add(this.HomeScreenViewPanel);
             this.Controls.Add(this.HelpScreen);
             this.Controls.Add(this.SettingsScreenPanel);
             this.Controls.Add(this.ControlPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "HomeScreen";
+            this.Text = "FlowForcast";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ControlPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ControlPanelBackgroundIMG)).EndInit();
