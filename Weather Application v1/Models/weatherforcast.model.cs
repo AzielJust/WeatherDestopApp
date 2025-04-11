@@ -13,12 +13,19 @@ namespace Weather_Application_v1.Models
         public class weather
         {
             public string icon { get; set; }
+            public string description { get; set; }  // Added description
+        }
+
+        public class wind
+        {
+            public double speed { get; set; }  // Added wind speed
         }
 
         public class list
         {
             public main main { get; set; }
             public List<weather> weather { get; set; }
+            public wind wind { get; set; }  // Added wind
             public string dt_txt { get; set; }
         }
 
@@ -30,9 +37,11 @@ namespace Weather_Application_v1.Models
     
     public class DailyForecast
     {
-        public string Date { get; set; }       // Format: "YYYY-MM-DD"
-        public string Icon { get; set; }       // Weather icon code
-        public double MinTemp { get; set; }    // Minimum temperature
-        public double MaxTemp { get; set; }    // Maximum temperature
+        public string Date { get; set; }
+        public string Icon { get; set; }
+        public string Description { get; set; }  // Added
+        public double WindSpeed { get; set; }    // Added (in m/s)
+        public double MinTemp { get; set; }
+        public double MaxTemp { get; set; }
     }
 }

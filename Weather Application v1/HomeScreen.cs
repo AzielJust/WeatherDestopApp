@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,36 +129,40 @@ namespace Weather_Application_v1
         
         void GetFiveDayForecast()
         {
-            try
+           
+            using (WebClient wc = new WebClient())
             {
-                using (WebClient wc = new WebClient())
+                // Added 'lang=en' parameter to get English descriptions
+                string marineAPIURL = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={openWeatherAPIKey}&units=metric&lang=en";
+                var json = wc.DownloadString(marineAPIURL);
+                var forecastData = JsonConvert.DeserializeObject<five_day_forecast_model.root>(json);
+
+                var dailyForecasts = forecastData.list
+                    .GroupBy(item => DateTime.Parse(item.dt_txt).Date)
+                    .Select(group => group
+                        .OrderBy(item => Math.Abs(DateTime.Parse(item.dt_txt).Hour - 12))
+                        .First())
+                    .Take(5)
+                    .Select(item => new DailyForecast 
+                    {
+                        Date = DateTime.Parse(item.dt_txt).ToString("ddd, MMM dd"),
+                        Icon = item.weather.First().icon,
+                        Description = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(item.weather.First().description), // Capitalized description
+                        WindSpeed = Math.Round(item.wind.speed * 3.6, 1), // Convert m/s to km/h and round
+                        MinTemp = Math.Round(item.main.temp_min),
+                        MaxTemp = Math.Round(item.main.temp_max)
+                    })
+                    .ToList();
+        
+                // Display in UI
+                DisplayFiveDayForecast(dailyForecasts);
+                
+                // Optional: Print to console for debugging
+                Console.WriteLine("Forecast loaded successfully:");
+                foreach (var forecast in dailyForecasts)
                 {
-                    string marineAPIURL = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={openWeatherAPIKey}&units=metric";
-                    var json = wc.DownloadString(marineAPIURL);
-                    var forecastData = JsonConvert.DeserializeObject<five_day_forecast_model.root>(json);
-    
-                    var dailyForecasts = forecastData.list
-                        .GroupBy(item => DateTime.Parse(item.dt_txt).Date)
-                        .Select(group => group
-                            .OrderBy(item => Math.Abs(DateTime.Parse(item.dt_txt).Hour - 12))
-                            .First())
-                        .Take(5)
-                        .Select(item => new DailyForecast 
-                        {
-                            Date = DateTime.Parse(item.dt_txt).ToString("ddd, MMM dd"), // More readable format
-                            Icon = item.weather.First().icon,
-                            MinTemp = Math.Round(item.main.temp_min),
-                            MaxTemp = Math.Round(item.main.temp_max)
-                        })
-                        .ToList();
-            
-                    // Display in UI
-                    DisplayFiveDayForecast(dailyForecasts);
+                    Console.WriteLine($"{forecast.Date}: {forecast.Description}, {forecast.WindSpeed} km/h, {forecast.MinTemp}°C/{forecast.MaxTemp}°C");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Failed to load forecast: {ex.Message}");
             }
         }
         
