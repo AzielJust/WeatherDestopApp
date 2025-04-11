@@ -108,10 +108,12 @@
     <Compile Include="HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocationCoordinates.cs" />
+    <Compile Include="Models\locationcoordinates.model.cs" />
+    <Compile Include="Models\wavedata.model.cs" />
+    <Compile Include="Models\weatherdetails.model.cs" />
+    <Compile Include="Models\weatherforcast.model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WeatherDetails.cs" />
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>

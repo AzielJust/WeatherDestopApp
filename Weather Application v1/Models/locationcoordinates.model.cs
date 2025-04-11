@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 
-namespace Weather_Application_v1
+namespace Weather_Application_v1.Models
 {
     public class GeoapifyResponse
     {

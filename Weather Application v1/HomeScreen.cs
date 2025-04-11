@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net;
+using Weather_Application_v1.Models;
 
 
 namespace Weather_Application_v1
@@ -16,10 +17,12 @@ namespace Weather_Application_v1
     public partial class HomeScreen: Form
     {
         string geoapifyAPIKey = "7da95d2324c84ea18d57f28800ad8993";
-        private string openWeatherAPIKey = "d04041825617e22140b626f6392e0c81";
+        string openWeatherAPIKey = "d04041825617e22140b626f6392e0c81";
+        string stormglassAPIKey = "a6f378b6-1561-11f0-a906-0242ac130003-a6f37910-1561-11f0-a906-0242ac130003";
         
         double longitude;
         double latitude;
+        string formatedLocation;
         public HomeScreen()
         {
             InitializeComponent();
@@ -31,12 +34,17 @@ namespace Weather_Application_v1
 
         }
 
+        void formatLocation()
+        {
+            string encoded = HomeScreenSearchBar.Text.Replace(" ", "%");
+            formatedLocation = encoded;
+        }
         void getBeachLocation()
         {
             using (WebClient wc = new WebClient())
             {
                 string geoapifyURL = string.Format("https://api.geoapify.com/v1/geocode/search?text=" +
-                                           HomeScreenSearchBar.Text + "%20Beach%20Barbados&apiKey=" + geoapifyAPIKey +
+                                           formatedLocation + "&apiKey=" + geoapifyAPIKey +
                                            "&fields=lon,lat");
         
                 var jsonResult = wc.DownloadString(geoapifyURL);
@@ -50,6 +58,7 @@ namespace Weather_Application_v1
                     // Get coordinates (two ways)
                     longitude = firstResult.Geometry.Coordinates[0];
                     latitude = firstResult.Geometry.Coordinates[1];
+                    HomeScreenBeachName.Text = firstResult.Properties.Formatted;
             
                     // Use the data as needed
                     Console.WriteLine(longitude + "," + latitude);
@@ -62,21 +71,43 @@ namespace Weather_Application_v1
             using (WebClient wc = new WebClient())
             {
                 string openWeatherURL = string.Format("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + openWeatherAPIKey + "&units=metric");
-                var jsonResult = wc.DownloadString(openWeatherURL);
-                WeatherResponse weatherData = JsonConvert.DeserializeObject<WeatherResponse>(jsonResult);
+                var json = wc.DownloadString(openWeatherURL);
+                weatherdetails_model.root weatherData = JsonConvert.DeserializeObject<weatherdetails_model.root>(json);
                 
-                if (weatherData != null && weatherData.Cod == 200)
+                if (weatherData != null)
                 {
-                    Console.WriteLine($"Temperature: {weatherData.Main.Temperature}°C");
-                    Console.WriteLine($"Conditions: {weatherData.Weather[0].Description}");
-                    Console.WriteLine($"Wind Speed: {weatherData.Wind.Speed} m/s");
+                    Console.WriteLine($"Temperature: {weatherData.main.temp}°C");
+                    Console.WriteLine($"Conditions: {weatherData.weather[0].description}");
+                    Console.WriteLine($"Icon: {weatherData.weather[0].icon}");
+                    Console.WriteLine($"Wind Speed: {weatherData.wind.speed} m/s");
+                    Console.WriteLine(openWeatherURL);
+                    
+                    HomeScreenForcastImage.Load(string.Format("https://openweathermap.org/img/wn/" + weatherData.weather[0].icon + "@4x.png"));
+                    HomeScreenBeachTemp.Text = weatherData.main.temp + " °C";
+                    HomeScreenConditionWindSpeed.Text = weatherData.wind.speed + " m/s";
+                    HomeScreenConditionTemp.Text = weatherData.main.temp + " °C";
+                    HomeScreenOverview.Text = weatherData.weather[0].description;
                 }
+            }
+        }
+        void GetWaveDetails()
+        {
+            using (WebClient wc = new WebClient())
+            {
+                string marineAPIURL = $"https://marine-api.open-meteo.com/v1/marine?latitude={latitude}&longitude={longitude}&current=swell_wave_height,wave_height";
+                var json = wc.DownloadString(marineAPIURL);
+                marinedata_model.root marineData = JsonConvert.DeserializeObject<marinedata_model.root>(json);
+
+                Console.WriteLine("Swell Size: " + marineData.current.swell_wave_height);
+                HomeScreenConditionSwellSize.Text = (marineData.current.swell_wave_height);
             }
         }
         private void HomeScreenSearchButton_Click(object sender, EventArgs e)
         {
+            formatLocation();
             getBeachLocation();
             getWeatherDetails();
+            GetWaveDetails();
         }
     }
 }

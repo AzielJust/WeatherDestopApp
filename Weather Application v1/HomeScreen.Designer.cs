@@ -37,8 +37,9 @@
             this.ControlPanelHomeButton = new System.Windows.Forms.Button();
             this.ControlPanelBackgroundIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenViewPanel = new System.Windows.Forms.Panel();
+            this.HomeScreenOverview = new System.Windows.Forms.Label();
             this.HomeScreenConditionTemp = new System.Windows.Forms.Label();
-            this.HomeScreenConditionTide = new System.Windows.Forms.Label();
+            this.HomeScreenCurrentTime = new System.Windows.Forms.Label();
             this.HomeScreenConditionWindSpeed = new System.Windows.Forms.Label();
             this.HomeScreenConditionSwellSize = new System.Windows.Forms.Label();
             this.HomeScreenBeachTemp = new System.Windows.Forms.Label();
@@ -48,14 +49,14 @@
             this.HomeScreenConditionsIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenForcastIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenSearchBarBackgroundIMG = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.HomeScreenForcastImage = new System.Windows.Forms.PictureBox();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControlPanelBackgroundIMG)).BeginInit();
             this.HomeScreenViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenConditionsIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenSearchBarBackgroundIMG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).BeginInit();
             this.SuspendLayout();
             // 
             // ControlPanel
@@ -149,8 +150,9 @@
             // HomeScreenViewPanel
             // 
             this.HomeScreenViewPanel.BackColor = System.Drawing.Color.Transparent;
+            this.HomeScreenViewPanel.Controls.Add(this.HomeScreenOverview);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionTemp);
-            this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionTide);
+            this.HomeScreenViewPanel.Controls.Add(this.HomeScreenCurrentTime);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionWindSpeed);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionSwellSize);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenBeachTemp);
@@ -160,11 +162,21 @@
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionsIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchBarBackgroundIMG);
-            this.HomeScreenViewPanel.Controls.Add(this.pictureBox1);
+            this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastImage);
             this.HomeScreenViewPanel.Location = new System.Drawing.Point(102, 12);
             this.HomeScreenViewPanel.Name = "HomeScreenViewPanel";
             this.HomeScreenViewPanel.Size = new System.Drawing.Size(1035, 635);
             this.HomeScreenViewPanel.TabIndex = 7;
+            // 
+            // HomeScreenOverview
+            // 
+            this.HomeScreenOverview.Font = new System.Drawing.Font("Roboto", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeScreenOverview.ForeColor = System.Drawing.Color.White;
+            this.HomeScreenOverview.Location = new System.Drawing.Point(38, 279);
+            this.HomeScreenOverview.Name = "HomeScreenOverview";
+            this.HomeScreenOverview.Size = new System.Drawing.Size(338, 84);
+            this.HomeScreenOverview.TabIndex = 13;
+            this.HomeScreenOverview.Text = "[Weather Overview]";
             // 
             // HomeScreenConditionTemp
             // 
@@ -177,16 +189,16 @@
             this.HomeScreenConditionTemp.TabIndex = 11;
             this.HomeScreenConditionTemp.Text = "[Temp]";
             // 
-            // HomeScreenConditionTide
+            // HomeScreenCurrentTime
             // 
-            this.HomeScreenConditionTide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(59)))), ((int)(((byte)(82)))));
-            this.HomeScreenConditionTide.Font = new System.Drawing.Font("Roboto ExtraBold", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeScreenConditionTide.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.HomeScreenConditionTide.Location = new System.Drawing.Point(460, 567);
-            this.HomeScreenConditionTide.Name = "HomeScreenConditionTide";
-            this.HomeScreenConditionTide.Size = new System.Drawing.Size(141, 31);
-            this.HomeScreenConditionTide.TabIndex = 10;
-            this.HomeScreenConditionTide.Text = "[Tide]";
+            this.HomeScreenCurrentTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(59)))), ((int)(((byte)(82)))));
+            this.HomeScreenCurrentTime.Font = new System.Drawing.Font("Roboto ExtraBold", 19F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeScreenCurrentTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.HomeScreenCurrentTime.Location = new System.Drawing.Point(460, 567);
+            this.HomeScreenCurrentTime.Name = "HomeScreenCurrentTime";
+            this.HomeScreenCurrentTime.Size = new System.Drawing.Size(141, 31);
+            this.HomeScreenCurrentTime.TabIndex = 10;
+            this.HomeScreenCurrentTime.Text = "[Time]";
             // 
             // HomeScreenConditionWindSpeed
             // 
@@ -214,7 +226,7 @@
             // 
             this.HomeScreenBeachTemp.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeScreenBeachTemp.ForeColor = System.Drawing.Color.White;
-            this.HomeScreenBeachTemp.Location = new System.Drawing.Point(16, 217);
+            this.HomeScreenBeachTemp.Location = new System.Drawing.Point(31, 200);
             this.HomeScreenBeachTemp.Name = "HomeScreenBeachTemp";
             this.HomeScreenBeachTemp.Size = new System.Drawing.Size(301, 84);
             this.HomeScreenBeachTemp.TabIndex = 7;
@@ -224,7 +236,7 @@
             // 
             this.HomeScreenBeachName.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeScreenBeachName.ForeColor = System.Drawing.Color.White;
-            this.HomeScreenBeachName.Location = new System.Drawing.Point(13, 135);
+            this.HomeScreenBeachName.Location = new System.Drawing.Point(31, 114);
             this.HomeScreenBeachName.Name = "HomeScreenBeachName";
             this.HomeScreenBeachName.Size = new System.Drawing.Size(485, 82);
             this.HomeScreenBeachName.TabIndex = 6;
@@ -287,14 +299,14 @@
             this.HomeScreenSearchBarBackgroundIMG.TabIndex = 0;
             this.HomeScreenSearchBarBackgroundIMG.TabStop = false;
             // 
-            // pictureBox1
+            // HomeScreenForcastImage
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(416, 146);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(289, 216);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.HomeScreenForcastImage.Location = new System.Drawing.Point(426, 114);
+            this.HomeScreenForcastImage.Name = "HomeScreenForcastImage";
+            this.HomeScreenForcastImage.Size = new System.Drawing.Size(279, 248);
+            this.HomeScreenForcastImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.HomeScreenForcastImage.TabIndex = 12;
+            this.HomeScreenForcastImage.TabStop = false;
             // 
             // HomeScreen
             // 
@@ -314,12 +326,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenConditionsIMG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastIMG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeScreenSearchBarBackgroundIMG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeScreenForcastImage)).EndInit();
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Label HomeScreenOverview;
+
         private System.Windows.Forms.Label HomeScreenConditionSwellSize;
-        private System.Windows.Forms.Label HomeScreenConditionTide;
+        private System.Windows.Forms.Label HomeScreenCurrentTime;
         private System.Windows.Forms.Label HomeScreenConditionTemp;
 
         private System.Windows.Forms.Label HomeScreenBeachName;
@@ -334,7 +348,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox HomeScreenForcastImage;
 
         private System.Windows.Forms.Panel HomeScreenViewPanel;
 
