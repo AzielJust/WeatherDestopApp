@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|c:\\users\\aziel\\source\\repos\\weather application v1\\weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|c:\\users\\aziel\\source\\repos\\weather application v1\\weather application v1\\homescreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|c:\\users\\aziel\\source\\repos\\weather application v1\\weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{26D9C7C0-17FB-4789-8679-F447399F9D6C}|Weather Application v1\\Weather Application v1.csproj|solutionrelative:weather application v1\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomeScreen.Designer.cs",
               "DocumentMoniker": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.Designer.cs",
               "RelativeDocumentMoniker": "Weather Application v1\\HomeScreen.Designer.cs",
@@ -35,7 +35,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HomeScreen.cs [Design]",
               "DocumentMoniker": "C:\\Users\\aziel\\source\\repos\\Weather Application v1\\Weather Application v1\\HomeScreen.cs",
               "RelativeDocumentMoniker": "Weather Application v1\\HomeScreen.cs",

@@ -36,6 +36,7 @@
             this.ControlPanelHomeButton = new System.Windows.Forms.Button();
             this.ControlPanelBackgroundIMG = new System.Windows.Forms.PictureBox();
             this.HomeScreenViewPanel = new System.Windows.Forms.Panel();
+            this.HomeScreenBeachName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ForecastUC = new System.Windows.Forms.FlowLayoutPanel();
             this.HomeScreenOverview = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.HomeScreenConditionWindSpeed = new System.Windows.Forms.Label();
             this.HomeScreenConditionSwellSize = new System.Windows.Forms.Label();
             this.HomeScreenBeachTemp = new System.Windows.Forms.Label();
-            this.HomeScreenBeachName = new System.Windows.Forms.Label();
             this.HomeScreenSearchButton = new System.Windows.Forms.Button();
             this.HomeScreenSearchBar = new System.Windows.Forms.TextBox();
             this.HomeScreenConditionsIMG = new System.Windows.Forms.PictureBox();
@@ -91,7 +91,6 @@
             this.ControlPanelLeaveButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelLeaveButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelLeaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ControlPanelLeaveButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelLeaveButton.Image")));
             this.ControlPanelLeaveButton.Location = new System.Drawing.Point(13, 556);
             this.ControlPanelLeaveButton.Name = "ControlPanelLeaveButton";
             this.ControlPanelLeaveButton.Size = new System.Drawing.Size(44, 42);
@@ -104,7 +103,6 @@
             this.ControlPanelHelpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelHelpButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ControlPanelHelpButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelHelpButton.Image")));
             this.ControlPanelHelpButton.Location = new System.Drawing.Point(13, 234);
             this.ControlPanelHelpButton.Name = "ControlPanelHelpButton";
             this.ControlPanelHelpButton.Size = new System.Drawing.Size(44, 42);
@@ -118,7 +116,6 @@
             this.ControlPanelSettingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelSettingsButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ControlPanelSettingsButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelSettingsButton.Image")));
             this.ControlPanelSettingsButton.Location = new System.Drawing.Point(13, 164);
             this.ControlPanelSettingsButton.Name = "ControlPanelSettingsButton";
             this.ControlPanelSettingsButton.Size = new System.Drawing.Size(44, 42);
@@ -132,7 +129,6 @@
             this.ControlPanelHomeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
             this.ControlPanelHomeButton.FlatAppearance.BorderSize = 0;
             this.ControlPanelHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ControlPanelHomeButton.Image = ((System.Drawing.Image)(resources.GetObject("ControlPanelHomeButton.Image")));
             this.ControlPanelHomeButton.Location = new System.Drawing.Point(13, 97);
             this.ControlPanelHomeButton.Name = "ControlPanelHomeButton";
             this.ControlPanelHomeButton.Size = new System.Drawing.Size(44, 42);
@@ -153,6 +149,7 @@
             // HomeScreenViewPanel
             // 
             this.HomeScreenViewPanel.BackColor = System.Drawing.Color.Transparent;
+            this.HomeScreenViewPanel.Controls.Add(this.HomeScreenBeachName);
             this.HomeScreenViewPanel.Controls.Add(this.label1);
             this.HomeScreenViewPanel.Controls.Add(this.ForecastUC);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenOverview);
@@ -161,17 +158,26 @@
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionWindSpeed);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionSwellSize);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenBeachTemp);
-            this.HomeScreenViewPanel.Controls.Add(this.HomeScreenBeachName);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchButton);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchBar);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenConditionsIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenSearchBarBackgroundIMG);
             this.HomeScreenViewPanel.Controls.Add(this.HomeScreenForcastImage);
-            this.HomeScreenViewPanel.Location = new System.Drawing.Point(262, 458);
+            this.HomeScreenViewPanel.Location = new System.Drawing.Point(115, 649);
             this.HomeScreenViewPanel.Name = "HomeScreenViewPanel";
             this.HomeScreenViewPanel.Size = new System.Drawing.Size(1035, 635);
             this.HomeScreenViewPanel.TabIndex = 7;
+            // 
+            // HomeScreenBeachName
+            // 
+            this.HomeScreenBeachName.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeScreenBeachName.ForeColor = System.Drawing.Color.White;
+            this.HomeScreenBeachName.Location = new System.Drawing.Point(31, 114);
+            this.HomeScreenBeachName.Name = "HomeScreenBeachName";
+            this.HomeScreenBeachName.Size = new System.Drawing.Size(485, 82);
+            this.HomeScreenBeachName.TabIndex = 6;
+            this.HomeScreenBeachName.Text = "[Beach Name]";
             // 
             // label1
             // 
@@ -182,6 +188,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 39);
             this.label1.TabIndex = 15;
+            this.label1.Text = "Forecast";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ForecastUC
@@ -200,6 +207,7 @@
             this.HomeScreenOverview.Name = "HomeScreenOverview";
             this.HomeScreenOverview.Size = new System.Drawing.Size(338, 84);
             this.HomeScreenOverview.TabIndex = 13;
+            this.HomeScreenOverview.Text = "[Overview]";
             // 
             // HomeScreenConditionTemp
             // 
@@ -249,15 +257,7 @@
             this.HomeScreenBeachTemp.Name = "HomeScreenBeachTemp";
             this.HomeScreenBeachTemp.Size = new System.Drawing.Size(301, 84);
             this.HomeScreenBeachTemp.TabIndex = 7;
-            // 
-            // HomeScreenBeachName
-            // 
-            this.HomeScreenBeachName.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeScreenBeachName.ForeColor = System.Drawing.Color.White;
-            this.HomeScreenBeachName.Location = new System.Drawing.Point(31, 114);
-            this.HomeScreenBeachName.Name = "HomeScreenBeachName";
-            this.HomeScreenBeachName.Size = new System.Drawing.Size(485, 82);
-            this.HomeScreenBeachName.TabIndex = 6;
+            this.HomeScreenBeachTemp.Text = "[Temp]";
             // 
             // HomeScreenSearchButton
             // 
@@ -284,10 +284,10 @@
             this.HomeScreenSearchBar.Name = "HomeScreenSearchBar";
             this.HomeScreenSearchBar.Size = new System.Drawing.Size(539, 28);
             this.HomeScreenSearchBar.TabIndex = 4;
+            this.HomeScreenSearchBar.Text = "Search Beach";
             // 
             // HomeScreenConditionsIMG
             // 
-            this.HomeScreenConditionsIMG.Image = ((System.Drawing.Image)(resources.GetObject("HomeScreenConditionsIMG.Image")));
             this.HomeScreenConditionsIMG.Location = new System.Drawing.Point(16, 393);
             this.HomeScreenConditionsIMG.Name = "HomeScreenConditionsIMG";
             this.HomeScreenConditionsIMG.Size = new System.Drawing.Size(690, 233);
@@ -297,7 +297,8 @@
             // 
             // HomeScreenForcastIMG
             // 
-            this.HomeScreenForcastIMG.Image = ((System.Drawing.Image)(resources.GetObject("HomeScreenForcastIMG.Image")));
+            this.HomeScreenForcastIMG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeScreenForcastIMG.BackgroundImage")));
+            this.HomeScreenForcastIMG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeScreenForcastIMG.Location = new System.Drawing.Point(752, 18);
             this.HomeScreenForcastIMG.Name = "HomeScreenForcastIMG";
             this.HomeScreenForcastIMG.Size = new System.Drawing.Size(272, 608);
@@ -307,7 +308,7 @@
             // 
             // HomeScreenSearchBarBackgroundIMG
             // 
-            this.HomeScreenSearchBarBackgroundIMG.Image = ((System.Drawing.Image)(resources.GetObject("HomeScreenSearchBarBackgroundIMG.Image")));
+            this.HomeScreenSearchBarBackgroundIMG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeScreenSearchBarBackgroundIMG.BackgroundImage")));
             this.HomeScreenSearchBarBackgroundIMG.Location = new System.Drawing.Point(12, 17);
             this.HomeScreenSearchBarBackgroundIMG.Name = "HomeScreenSearchBarBackgroundIMG";
             this.HomeScreenSearchBarBackgroundIMG.Size = new System.Drawing.Size(631, 56);
@@ -331,7 +332,7 @@
             this.SettingsScreenPanel.Controls.Add(this.SettingsPanelDescription);
             this.SettingsScreenPanel.Controls.Add(this.SettingsPanelUnitsOfMeasurment);
             this.SettingsScreenPanel.Controls.Add(this.SettingsScreenSettings);
-            this.SettingsScreenPanel.Location = new System.Drawing.Point(24, 556);
+            this.SettingsScreenPanel.Location = new System.Drawing.Point(103, 12);
             this.SettingsScreenPanel.Name = "SettingsScreenPanel";
             this.SettingsScreenPanel.Size = new System.Drawing.Size(1035, 631);
             this.SettingsScreenPanel.TabIndex = 8;
@@ -400,12 +401,10 @@
             // HelpScreen
             // 
             this.HelpScreen.Controls.Add(this.HelpScreenGetHelp);
-            this.HelpScreen.Controls.Add(this.SettingsScreenPanel);
-            this.HelpScreen.Controls.Add(this.HomeScreenViewPanel);
             this.HelpScreen.Controls.Add(this.HelpScreenDescription);
             this.HelpScreen.Controls.Add(this.HelpScreenTitle);
             this.HelpScreen.Controls.Add(this.HelpScreenHelp);
-            this.HelpScreen.Location = new System.Drawing.Point(105, 12);
+            this.HelpScreen.Location = new System.Drawing.Point(103, 12);
             this.HelpScreen.Name = "HelpScreen";
             this.HelpScreen.Size = new System.Drawing.Size(1035, 631);
             this.HelpScreen.TabIndex = 9;
@@ -463,8 +462,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1149, 660);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.HomeScreenViewPanel);
             this.Controls.Add(this.HelpScreen);
+            this.Controls.Add(this.SettingsScreenPanel);
             this.Controls.Add(this.ControlPanel);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "HomeScreen";
