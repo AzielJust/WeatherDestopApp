@@ -5,21 +5,21 @@
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌦️ Real-Time Weather Overview  
+### Real-Time Weather Overview  
 Get up-to-the-minute weather updates including temperature, wind speed, swell height, and a descriptive forecast—complete with intuitive icons.
 
-### 📅 5-Day Forecast Visualization  
+### 5-Day Forecast Visualization  
 View detailed forecasts including daily highs and lows with weather icons, and trend insights using visual layout cards.
 
-### 🏖️ Beach-Specific Search  
+### 🏖Beach-Specific Search  
 Quickly look up conditions for specific beaches worldwide using a responsive search function.
 
-### ⚙️ Customizable Preferences  
+### ⚙Customizable Preferences  
 Toggle between Metric and Imperial units (°C/°F, kph/mph) with visual indicators and consistent updates across all displayed data.
 
-### 🔗 Integrated APIs  
+### Integrated APIs  
 Pulls weather data from multiple trusted APIs like OpenWeatherMap, Geoapify, and Open Meteo for a seamless, enriched user experience.
 
 ---
@@ -43,10 +43,10 @@ Pulls weather data from multiple trusted APIs like OpenWeatherMap, Geoapify, and
 
 ## 🖼️ User Interface Overview
 
-### 🔍 Search Panel  
+### Search Panel  
 A top-mounted search bar allows users to type in beach names. Matching results show current conditions with visual indicators (e.g., “29.32°C scattered clouds”).
 
-### 📊 Current Conditions Panel  
+### Current Conditions Panel  
 Presented in a card-style layout with key metrics:
 - Swell Height (e.g., 1.24 m)
 - Temperature (e.g., 29.32 °C)
@@ -54,26 +54,26 @@ Presented in a card-style layout with key metrics:
 - Weather Icon and Description
 
 
-### 📆 Forecast Section  
+### Forecast Section  
 A horizontal row of forecast cards shows:
 - Day & Date (e.g., "Fri, Apr 11")
 - Temperature Range (e.g., "27 °C / 29 °C")
 - Weather Icons
 
-### ⚙️ Settings Panel  
+### ⚙Settings Panel  
 Choose between Metric or Imperial units via color-coded buttons. All displayed measurements update accordingly.
 
-### ❓ Help Section  
+### Help Section  
 Provides support info and links to online help resources—all within a consistent, clean layout.
 
-### 🏠 Home Page
+### Home Page
 ![Screenshot 2025-04-11 150715](https://github.com/user-attachments/assets/535f00bf-fcc7-4779-bba7-0de2cc797a0d)
 
-### ⚙️ Settings
+### Settings
 ![Screenshot 2025-04-11 150823](https://github.com/user-attachments/assets/c775aa16-1489-4fa0-b908-92d43b368276)
 
 
-### ❓ Help
+### Help
 ![Screenshot 2025-04-11 150840](https://github.com/user-attachments/assets/93f74399-0a0e-425c-92d0-4a00a3d7d190)
 
 
