@@ -5,7 +5,7 @@
 
 ---
 
-## Features
+## 📝 Features
 
 ### Real-Time Weather Overview  
 Get up-to-the-minute weather updates including temperature, wind speed, swell height, and a descriptive forecast—complete with intuitive icons.
@@ -13,10 +13,10 @@ Get up-to-the-minute weather updates including temperature, wind speed, swell he
 ### 5-Day Forecast Visualization  
 View detailed forecasts including daily highs and lows with weather icons, and trend insights using visual layout cards.
 
-### 🏖Beach-Specific Search  
+### Beach-Specific Search  
 Quickly look up conditions for specific beaches worldwide using a responsive search function.
 
-### ⚙Customizable Preferences  
+### Customizable Preferences  
 Toggle between Metric and Imperial units (°C/°F, kph/mph) with visual indicators and consistent updates across all displayed data.
 
 ### Integrated APIs  
@@ -60,7 +60,7 @@ A horizontal row of forecast cards shows:
 - Temperature Range (e.g., "27 °C / 29 °C")
 - Weather Icons
 
-### ⚙Settings Panel  
+### Settings Panel  
 Choose between Metric or Imperial units via color-coded buttons. All displayed measurements update accordingly.
 
 ### Help Section  
